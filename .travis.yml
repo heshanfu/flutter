@@ -1,4 +1,8 @@
 language: android
+android:
+  components:
+    - android-28
+
 before_install:
   - curl -O https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz
   - tar xf flutter_linux_v0.8.2-beta.tar.xz
