@@ -11,9 +11,11 @@ android:
 
 before_install:
   - yes | sdkmanager "platforms;android-27"
+  - mkdir -p ~/.flutter && pushd ~/.flutter
   - curl -O https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz
   - tar xf flutter_linux_v0.8.2-beta.tar.xz
   - export PATH="$(pwd)/flutter/bin:$PATH"
+  - popd
   - flutter config --no-analytics
   - flutter doctor
 
