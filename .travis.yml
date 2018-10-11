@@ -1,10 +1,16 @@
 language: android
+jdk:
+    - oraclejdk8
 android:
   components:
+    # The BuildTools version used by üWave Flutter
+    - tools
     - build-tools-27.0.3
+    # The SDK version used to compile üWave Flutter
     - android-27
 
 before_install:
+  - yes | sdkmanager "platforms;android-27"
   - curl -O https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz
   - tar xf flutter_linux_v0.8.2-beta.tar.xz
   - export PATH="$(pwd)/flutter/bin:$PATH"
