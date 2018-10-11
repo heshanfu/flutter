@@ -19,5 +19,5 @@ before_install:
 
 script:
   - flutter build apk
-  - flutter analyze .
+  - flutter analyze lib
   - flutter test
